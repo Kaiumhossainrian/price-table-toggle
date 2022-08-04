@@ -1,0 +1,132 @@
+ .text1 {
+  display: none;
+  animation: priceFade .4s alternate linear forwards;
+}
+
+ .text2 {
+  animation: priceFade .4s alternate linear forwards;
+}
+
+@keyframes priceFade{
+  from{
+    transform: scale(.8);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+    border: 1px solid #8C368C;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.switch span {
+    width: 269px;
+    height: 62px;
+    cursor: pointer;
+    display: inline-flex;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #666666;
+  flex-wrap: wrap;
+  line-height: 1;
+}
+
+.switch span em {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #349B95;
+    margin-left: 14px;
+}
+
+.switch span.price-active {
+  background: #349B95;
+  color: #fff;
+}
+
+.switch span.price-active em {
+  color: #fff;
+}
+
+label.switch br {
+    display: none !important;
+}
+
+.price-content-box {
+    border: 1.5px solid #AF5DAF;
+    border-radius: 24px;
+    padding: 25px 40px;
+  margin-bottom:24px;
+}
+
+.price-top-content h1 {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 30px;
+    color: #343434;
+    line-height: 1;
+}
+
+.price-top-content h2 {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+    color: #349B95;
+    margin: 19px 0 23px;
+}
+
+.price-top-content h2 span {
+    font-size: 27px;
+}
+
+.price-list ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+.price-list ul li {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 18px !important;
+    color: #8C8C8C !important;
+    margin-bottom: 3px;
+}
+
+.price-btn-wrap{
+  display: flex;
+    justify-content: center;
+    margin-top: 47px;
+}
+
+.pricing-btn {
+    font-family: 'Kanit';
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF !important;
+    background: #8C368C;
+    border-radius: 30px;
+    padding: 8px 36px;
+  transition:all .4s;
+}
+
+.price-content-box:hover .pricing-btn{
+  background:#319B95;
+}
