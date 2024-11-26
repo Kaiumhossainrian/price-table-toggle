@@ -1,3 +1,95 @@
+ 
+ 
+/* One Design */ 
+
+.hide_q {
+  display: none;
+}
+
+.switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 10px;
+  background-color: #F0F0F0;
+}
+.switch-wrapper [type=radio] {
+  position: absolute;
+  left: -9999px;
+}
+.switch-wrapper [type=radio]:checked#monthly + label[for=yearly] ~ .highlighter {
+  transform: none;
+}
+.switch-wrapper [type=radio]:checked#yearly + label[for=monthly] ~ .highlighter {
+  transform: translateX(100%);
+}
+.switch-wrapper label {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  min-width: 125px;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+  color: #000;
+}
+.switch-wrapper .highlighter {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: #000;
+  transition: transform 0.25s ease-in-out;
+}
+
+.switch-wrapper [type=radio]:checked#monthly ~ label[for=monthly],
+.switch-wrapper [type=radio]:checked#yearly ~ label[for=yearly] {
+  color: #fff;
+}
+
+.switch-wrapper [type=radio]:checked#monthly ~ label[for=monthly]:hover,
+.switch-wrapper [type=radio]:checked#yearly ~ label[for=yearly]:hover {
+  background: transparent;
+}
+
+.price-box {
+  border: 1px solid #ddd;
+  padding: 40px;
+  transition: all 0.3s linear;
+}
+.price-box .price-value-box .price-plan {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.3s linear;
+}
+.price-box .price-value-box .price-number span {
+  display: block;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 15px;
+}
+.price-box .price-listing {
+  border-top: 1px solid #E9E9E9;
+  margin-bottom: 40px;
+}
+.price-box .price-listing li i, .price-box .price-listing li svg {
+  margin-right: 10px;
+}
+.price-box:hover {
+  transform: translateY(-3px);
+}
+.price-box:hover .price-value-box .price-plan {
+  color: orangered;
+}
+/* One Design End */ 
+ 
+
  .text1 {
   display: none;
   animation: priceFade .4s alternate linear forwards;
@@ -130,3 +222,7 @@ label.switch br {
 .price-content-box:hover .pricing-btn{
   background:#319B95;
 }
+
+
+
+
